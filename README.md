@@ -13,3 +13,7 @@ Open `index.html` in a browser. The site is static and does not require a build 
 3. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and the `/ (root)` folder, then save.
 
 The page uses relative paths for its scripts, stylesheet, logo, and audio so it can be hosted from the repository root or a GitHub Pages project subpath.
+
+## Deploy with Vercel
+
+Import this repository into Vercel and deploy the project root. `vercel.json` includes the quiz data, stylesheet, scripts, logo, and audio files as static assets.
