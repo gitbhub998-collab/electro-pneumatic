@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electro Pneumatic</title>
+    <link rel="icon" href="assets/electro-pneumatic-logo.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img
+            class="brand-logo"
+            src="assets/electro-pneumatic-logo.jpg"
+            alt="Electro Pneumatic"
+            width="190"
+            height="127"
+        >
+    </header>
+
+    <main class="viewport">
+        <div class="assessment-container">
+
+            <div id="quiz-ui">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="meta-info">Question <span id="current-idx">01</span> / <span id="total-idx">00</span></div>
+                    </div>
+
+                    <div class="question-body" id="question-text"></div>
+
+                    <div id="options-container" class="options-grid"></div>
+
+                    <div class="footer-nav">
+                        <div class="nav-actions-right">
+                            <button class="btn-nav" id="btn-prev" onclick="move(-1)">BACK</button>
+                            <button class="btn-nav" id="btn-skip" onclick="move(1)">SKIP</button>
+                            <button class="btn-primary" id="btn-next" onclick="move(1)" disabled>NEXT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="results-ui" class="hidden">
+                <div class="card results-view">
+                    <div class="meta-info">Complete Question</div>
+                    <div class="final-pct" id="final-pct" aria-label="Final score">0%</div>
+                    <div class="feedback-container" id="final-feedback">...</div>
+                    <button class="btn-primary btn-full" id="results-action">RESTART ASSESSMENT</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>Developer By Bilal Mohamed</footer>
+
+
+    <!-- ضع ملفات الصوت هنا: audio/fail.mp3 و audio/success.mp3 -->
+    <audio id="audio-fail" preload="auto">
+        <source src="audio/fail.mp3" type="audio/mpeg">
+        <source src="audio/fail.wav" type="audio/wav">
+    </audio>
+    <audio id="audio-success" preload="auto">
+        <source src="audio/success.mp3" type="audio/mpeg">
+        <source src="audio/success.wav" type="audio/wav">
+    </audio>
+
+    <script src="quiz-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
